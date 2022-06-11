@@ -118,10 +118,22 @@ public class MiddleLevel {
             }
         }
         for (int i = 0; i < 2; i++) {
-            return (map[i][i] == ch && map[i + 1][i + 1] == ch && map[i + 2][i + 2] == ch && map[i + 3][i + 3] == ch) ||
-                    (map[i][1 - i] == ch && map[i + 1][2 - i] == ch && map[i + 2][3 - i] == ch && map[i + 3][4 - i] == ch) ||
-                    (map[0][4 - i] == ch && map[1][3 - i] == ch && map[2][2 - i] == ch && map[3][1 - i] == ch) ||
-                    (map[1][i + 3] == ch && map[2][i + 2] == ch && map[3][i + 1] == ch && map[4][i] == ch);
+            if ((map[i][i] == ch &&
+                    map[i + 1][i + 1] == ch &&
+                    map[i + 2][i + 2] == ch &&
+                    map[i + 3][i + 3] == ch) ||
+                    (map[i][1 - i] == ch &&
+                            map[i + 1][2 - i] == ch &&
+                            map[i + 2][3 - i] == ch &&
+                            map[i + 3][4 - i] == ch) ||
+                    (map[0][4 - i] == ch &&
+                            map[1][3 - i] == ch &&
+                            map[2][2 - i] == ch &&
+                            map[3][1 - i] == ch) ||
+                    (map[1][i + 3] == ch &&
+                            map[2][i + 2] == ch &&
+                            map[3][i + 1] == ch &&
+                            map[4][i] == ch)) return true;
         }
         return false;
     }
